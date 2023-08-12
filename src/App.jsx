@@ -1,8 +1,11 @@
 import React from "react";
+import Movie from "./Components/Movie";
 
 function App() {
     return (
-        <div>hello world</div>
+        <React.Fragment>
+            <Movie />
+        </React.Fragment>
     );
 }
 
