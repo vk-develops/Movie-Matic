@@ -63,6 +63,7 @@ const Movie = () => {
                 ) : (
                     <div className="empty">
                         <h1>No results found</h1>
+                        <h3>Enter valid input search</h3>
                     </div>
                 )
             }

@@ -133,3 +133,14 @@
         width: "100%";
     }
 }
+
+.empty{
+    height: 100vh;
+    padding: 5% 6%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
