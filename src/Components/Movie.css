@@ -94,7 +94,6 @@
     background: #222;
     border: 1px solid rgb(255, 255, 255, .1);
 }
-  
 .search input {
     flex: 1;
     border: none;
@@ -105,9 +104,33 @@
     color: #a1a1a1;
     background: #222;
 }
-  
 .search img {
     width: 35px;
     height: 35px;
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 600px) {
+    .search {
+      padding: 5% 6%;
+      width: 100%;
+    }
+    .search input {
+      font-size: 1rem;
+    }
+    .search img {
+      width: 20px;
+      height: 20px;
+    }
+}
+  
+/* @media screen and (max-width: 400px) {
+    .container {
+      margin-top: 2rem;
+    }
+    .movie {
+      width: "100%";
+      margin: 1rem;
+    }
+} */
