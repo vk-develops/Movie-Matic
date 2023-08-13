@@ -30,6 +30,19 @@ const Movie = () => {
 
     return (
         <section className="movie-section">
+            <div className="movie-header">
+                <div className="nav">
+                    <h1 className="heading">MovieMatic.</h1>
+                </div>
+                <div className="inputs">
+                    <input 
+                        type="text" 
+                        placeholder='Search for movies'
+                        value="Thor"
+                        onChange={() => movieSearch()}
+                    />
+                </div>
+            </div>
             <div className="movies">
                 <MovieCard movie={movie} />
             </div>
