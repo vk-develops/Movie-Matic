@@ -2,7 +2,9 @@ import React from 'react';
 import "./Movie.css";
 import MovieCard from './MovieCard';
 import { useState, useEffect } from 'react';
-
+import { BsSearch } from "react-icons/bs";
+import SearchIcon from "../assets/Search.svg";
+ 
 // //4e37068a
 // const API_URI = "https://www.omdbapi.com/?apikey=4e37068a";
 
@@ -24,9 +26,9 @@ const Movie = () => {
 
     }
 
-    useEffect(() => {
-        movieSearch("Thor");
-    }, [])
+    // useEffect(() => {
+    //     movieSearch("Thor");
+    // }, [])
 
     return (
         <section className="movie-section">
@@ -34,12 +36,17 @@ const Movie = () => {
                 <div className="nav">
                     <h1 className="heading">MovieMatic.</h1>
                 </div>
-                <div className="inputs">
+                <div className="search">
                     <input 
                         type="text" 
-                        placeholder='Search for movies'
-                        value="Thor"
-                        onChange={() => movieSearch()}
+                        placeholder="Search for movies"
+                        value=""
+                        onChange={() => {}}
+                    />
+                    <img 
+                        src={SearchIcon} 
+                        alt="Search" 
+                        onClick={() => {}}
                     />
                 </div>
             </div>
