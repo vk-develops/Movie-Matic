@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 40px;
 }
 .card{
     width: 19rem;
@@ -29,7 +29,7 @@
 .card .card-contents .cat{
     border-radius: 5px;
     border: 1px solid rgb(255, 255, 255, .5);
-    width: 60px;
+    width: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,16 +39,16 @@
     color: #eee;
     padding: 3px;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 10px;
 }
 .card .card-contents h1{
     color: #fff;
     padding-top: 8px;
-    font-size: 28px;
+    font-size: 22px;
 }
 .card .card-contents h5{
     color: #eee;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
 }
 .card .card-contents .overlay{
@@ -62,6 +62,9 @@
 }
 .card:hover img{
     transform: scale(1.2);
+}
+.card:hover{
+    transform: scale(1.1);
 }
 
 

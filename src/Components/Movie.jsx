@@ -18,17 +18,20 @@ const movie = {
 
 const Movie = () => {
 
+    const [ movies, setMovies ] = useState([]);
+    const [ searchItem, setSearchItem ] = useState("");
+
     const movieSearch = async (movieTitle) => {
         const response = await fetch(`${import.meta.env.VITE_APP_API_URI}&s=${movieTitle}`);
         const data = await response.json();
 
-        console.log(data.Search);
+        setMovies(data.Search);
 
     }
 
-    // useEffect(() => {
-    //     movieSearch("Thor");
-    // }, [])
+    useEffect(() => {
+        movieSearch("Thor");
+    }, [])
 
     return (
         <section className="movie-section">
@@ -40,19 +43,29 @@ const Movie = () => {
                     <input 
                         type="text" 
                         placeholder="Search for movies"
-                        value=""
-                        onChange={() => {}}
+                        value={searchItem}
+                        onChange={(e) => {setSearchItem(e.target.value)}}
                     />
                     <img 
                         src={SearchIcon} 
                         alt="Search" 
-                        onClick={() => {}}
+                        onClick={() => {movieSearch(searchItem)}}
                     />
                 </div>
             </div>
-            <div className="movies">
-                <MovieCard movie={movie} />
-            </div>
+            {
+                movies?.length > 0 ? (
+                    <div className="movies">
+                        {movies.map((movieItem) => (
+                            <MovieCard movie={movieItem} />
+                        ))}
+                    </div>
+                ) : (
+                    <div className="empty">
+                        <h1>No results found</h1>
+                    </div>
+                )
+            }
         </section>
     );
 }
